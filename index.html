@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Link Social Media IT-SUPPORT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Check Link Social Media IT-SUPPORT</h1>
+        <p id="datetime-display"></p>
+        
+        <div class="controls-container">
+            <label for="day-selector">ជ្រើសរើសថ្ងៃ:</label>
+            <select id="day-selector">
+                <option value="1">ថ្ងៃចន្ទ</option>
+                <option value="2">ថ្ងៃអង្គារ</option>
+                <option value="3">ថ្ងៃពុធ</option>
+                <option value="4">ថ្ងៃព្រហស្បតិ៍</option>
+                <option value="5">ថ្ងៃសុក្រ</option>
+                <option value="6">ថ្ងៃសៅរ៍</option>
+                <option value="0">ថ្ងៃអាទិត្យ</option>
+            </select>
+        </div>
+
+        <div class="header-buttons">
+            <button id="download-report-btn" class="header-btn report-btn">Download Report (PDF)</button>
+            <button id="clear-all-btn" class="header-btn clear-btn">Clear All Link Counts</button>
+        </div>
+    </header>
+    <main>
+        <div id="loader" class="loader"></div>
+        <div class="table-container" id="report-content">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>ឈ្មោះ</th>
+                        <th>ចំនួន Link</th>
+                        <th>រក្សាទុក</th>
+                        <th id="dynamic-day-header">វេនធ្វើការ</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    </tbody>
+            </table>
+        </div>
+        <div id="status-message"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
