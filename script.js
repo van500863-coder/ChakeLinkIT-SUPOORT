@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function displayDataForSelectedDay() {
         if (allUsersData.length === 0) {
-            tableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">ไม่พบข้อมูล។</td></tr>';
+            tableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">បញ្ហា</td></tr>';
             return;
         }
         const selectedDayIndex = parseInt(daySelector.value, 10);
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tableBody.innerHTML = allUsersData.map((item, index) => {
             const schedule = item.schedule || {};
-            const scheduleForDay = schedule[selectedDayName] || 'N/A';
+            const scheduleForDay = schedule[selectedDayName] || 'ប៉ះម៉ោងរៀន';
             return `
                 <tr>
                     <td>${item.name}</td>
@@ -233,4 +233,5 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDateTime();
     setInterval(updateDateTime, 1000);
     fetchData();
+
 });
